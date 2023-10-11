@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .main{
+            margin:15px;
+            border:1dvh black;
+            display: flex;
+        }
+
+        body {
+            flex-wrap: wrap;
+        }
+        star.container{
+            display: inline-block;
+        }
+
+        .star {
+            font-size:25px;
+            color:gray;
+            cursor: pointer;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container mt-5">
+            <h2 class="text-center">
+                <strong>Survey Form</strong>
+            </h2>
+            <hr>
+            <h5>Name<span style="color: red;">*</span></h5>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">First</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Last</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email<span style="color: red;">*</span></label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+
+            <h5><strong>Your Experience with us<span style="color: red;">*</span></strong></h5>
+            <div class="star.container">
+                <span class="star" onclick="rateStar(1)">★</span>
+                <span class="star" onclick="rateStar(2)">★</span>
+                <span class="star" onclick="rateStar(3)">★</span>
+                <span class="star" onclick="rateStar(4)">★</span>
+                <span class="star" onclick="rateStar(5)">★</span>
+
+            </div>
+            
+            <p>Overall, how would you like your experience with us</p>
+            <h5>
+                <strong>How Satisfied Are you:<span style="color: red;">*</span></strong>
+            </h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Very Unsatisfied</th>
+                        <th>Unsatisfied</th>
+                        <th>Neutral</th>
+                        <th>Satisfied</th>
+                        <th>Satisfied</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Purchase</td>
+                        <td>
+                            <input type="radio" name="satisfactionPurchase" value="VeryUnsatisfied">
+                        </td>
+                        <td>
+                            <input type="radio" name="satisfactionPurchase" value="Unsatisfied">
+                        </td>
+                        <td>
+                            <input type="radio" name="satisfactionPurchase" value="Neutral">
+                        </td>
+                        <td>
+                            <input type="radio" name="satisfactionPurchase" value="satisfied">
+                        </td>
+                        <td>
+                            <input type="radio" name="satisfactionPurchase" value="verySatisfied">
+                        </td>
+                    </tr>
+                    <tr>
+                    <td>Service</td>
+                    <td>
+                        <input type="radio" name="satisfactionService" value="VeryUnsatisfied">
+                    </td>
+                    <td>
+                        <input type="radio" name="satisfactionService" value="Unsatisfied">
+                    </td>
+                    <td>
+                        <input type="radio" name="satisfactionService" value="Neutral">
+                    </td>
+                    <td>
+                        <input type="radio" name="satisfactionService" value="Satisfied">
+                    </td>
+                    <td>
+                        <input type="radio" name="satisfactionService" value="Verysatisfied">
+                    </td>
+                </tr>
+                
+                    <td>Company Overall</td>
+                    <td>
+                        <input type="radio" name="satisfactionCompany" value="VeryUnsatisfied">
+                    </td>
+                    <td>
+                        <input type="radio" name="satisfactionCompany" value="Unsatisfied">
+                    </td>
+                    <td>
+                        <input type="radio" name="satisfactionCompany" value="Neutral">
+                    </td>
+                    <td>
+                        <input type="radio" name="satisfactionCompany" value="satisfied">
+                    </td>
+                    <td>
+                        <input type="radio" name="satisfactionCompany" value="Verysatisfied">
+                    </td>
+                
+                </tr>
+
+                </tbody>
+            </table>
+            <h5>
+                <strong>How Likely Are You To:<span style="color: red;">*</span></strong>
+            </h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Very Unlikely</th>
+                        <th>Unlikely</th>
+                        <th>Neutral</th>
+                        <th>Likely</th>
+                        <th>Very Likely</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Buy Form Us Again</td>
+                        <td>
+                            <input type="radio" name="likelihoodBuy" value="VeryUnlikely">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodBuy" value="Unlikely">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodBuy" value="Neutral">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodBuy" value="Likely">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodBuy" value="Verylikely">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Recommend Our Product to Others</td>
+                        <td>
+                            <input type="radio" name="likelihoodRecommendProduct" value="VeryUnlikely">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodRecommendProduct" value="Unlikely">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodRecommendProduct" value="Neutral">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodRecommendProduct" value="Likely">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodRecommendProduct" value="Verylikely">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Recommend Our Company to Others</td>
+                        <td>
+                            <input type="radio" name="likelihoodRecommendCompany" value="VeryUnlikely">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodRecommendCompany" value="Unlikely">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodRecommendCompany" value="Neutral">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodRecommendCompany" value="Likely">
+                        </td>
+                        <td>
+                            <input type="radio" name="likelihoodRecommendCompany" value="Verylikely">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-group">
+                <label for="Comments">
+                    <strong>Additional Comments and Suggestions</strong>
+                </label>
+
+                 
+                
+            </div>
+            <textarea class="form-control" id="Comments" rows="4"></textarea>
+
+            <div><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>
